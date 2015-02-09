@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bxd2</title>
+  <title>Social Service Resource Database</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
 
 </body>
 </html>
