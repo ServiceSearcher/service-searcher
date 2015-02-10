@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   validate :valid_email_domain
 
   def valid_email_domain
-    valid_domains = ['bronxdefenders.org']
+    valid_domains = ['bronxdefenders.org', 'michaelprude@gmail.com']
     if !domain_regex(valid_domains).match(self.email)
-      errors.add(:email, "is not a valid domain (acceptable domains: #{valid_domains.join(', ')})")
+      errors.add(:email, "#{self.email.match(/(?<=@).+/).to_s} is not a valid domain")
     end
   end
 
