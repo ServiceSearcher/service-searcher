@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # devise_for :users, :controllers => { :omniauth_callbacks => "users/auth/google_oauth2/callback" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :services
   root to: 'services#index'
 end
-
-# GmailAlerts::Application.routes.draw do
-#   get "/auth/:provider/callback" => 'sessions#create'
-# end

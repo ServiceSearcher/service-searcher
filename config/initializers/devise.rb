@@ -13,7 +13,7 @@ Devise.setup do |config|
   config.mailer_sender = 'signup@bxd.herokuapp.com'
 
   # Configure the class responsible to send e-mails.
-  config.mailer = 'Devise::Mailer'
+  # config.mailer = 'Devise::Mailer'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -232,7 +232,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :google_oauth2, ENV['BXD_APP_ID'], ENV['BXD_APP_SECRET'], { hd: 'bronxdefenders.org' }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -256,4 +256,5 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  #ID first, secret second
 end
