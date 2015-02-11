@@ -18,7 +18,7 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
-        <td><%= service.name %></td>
+        <td data-halign="center"><%= service.name %></td>
         <td><%= service.category %></td>
         <td><%= !service.website || service.website == '' ? '' : link_to('link', service.website, class: 'btn', target: :_blank) %></td>
         <td><%= service.notes %></td>
