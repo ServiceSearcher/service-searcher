@@ -52,3 +52,5 @@ end
 gem 'rails_12factor', group: :production
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'autoprefixer-rails'
