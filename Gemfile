@@ -50,3 +50,5 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-google-oauth2'
