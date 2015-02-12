@@ -21,7 +21,7 @@
     <% @services.each do |service| %>
       <tr>
         <td class="control"></td>
-        <td class="all"><%= service.name %></td>
+        <td class="all"><%= link_to(service.name, service_path(service)) %></td>
         <td class="min-phone-l text-center">
           <%= !service.website || service.website == '' ? '' : 
             link_to('link', service.website, class: 'btn btn-default', target: :_blank) %>
