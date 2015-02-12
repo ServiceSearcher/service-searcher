@@ -1,3 +1,4 @@
+<%= link_to 'New Service', new_service_path %>
 <table id="services_table" class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
@@ -5,7 +6,7 @@
       <th class="all">Name</th>
       <th class="min-phone-l text-center">Website</th>
       <th class="min-tablet col-md-2 col-sm-3">Category</th>
-      <th class="desktop col-md-5">Notes</th>
+      <th class="desktop col-md-6">Notes</th>
       <th class="none" >Phone</th>
       <th class="none">Address</th>
       <th class="none">Contact</th>
@@ -26,7 +27,7 @@
             link_to('link', service.website, class: 'btn btn-default', target: :_blank) %>
         </td>
         <td class="min-tablet col-md-2 col-sm-3"><%= service.category %></td>
-        <td class="desktop col-md-5"><%= truncate_text(service.notes) %></td>
+        <td class="desktop col-md-6"><%= truncate_text(service.notes) %></td>
         <td class="none"><%= service.phone %></td>
         <td class="none"><%= service.address %></td>
         <td class="none"><%= service.contact %></td>
@@ -45,9 +46,7 @@
 <br>
 
 <script>
-
   $(function(){
-
     var table = $('#services_table').dataTable({
       "autoWidth": false,
       // "heightMatch": "none",
@@ -58,27 +57,12 @@
       paging: false,
       responsive: {
         details: {
-          type: 'column'
+          type: 'column',
+          // renderer: renderChildRows
         }
       }
     });
 
-    // table.columnFilter({
-    //   aoColumns: [
-    //     {type: 'text'},
-    //     {type: 'select'},
-    //     {type: 'select', values: ['link', '']},
-    //     {type: 'text'},
-    //     null, null, null, null, null, null, null
-    //   ]
-    // });
   });
-  // $('window').resize(function(){
-  //   var table = $('#resourceTable').dataTable({
-  //     "autoWidth": true,
-  //     "columnDefs": [{ "visible": false, "targets": [2,3,5,6,7,8,9] }]
-  //   });
-  // });
 </script>
 
-<%= link_to 'New Service', new_service_path %>
