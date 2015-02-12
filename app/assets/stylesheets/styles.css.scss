@@ -2,6 +2,13 @@ $border-color: #dddddd;
 
 tr {
   vertical-align: middle;
+  // white-space: pre;
+}
+
+tr {
+   line-height: 25px;
+   min-height: 25px;
+   height: 25px;
 }
 
 th {
