@@ -18,7 +18,7 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
-        <td data-halign="center"><%= service.name %></td>
+        <td><%= service.name %></td>
         <td><%= service.category %></td>
         <td><%= !service.website || service.website == '' ? '' : link_to('link', service.website, class: 'btn', target: :_blank) %></td>
         <td><%= service.notes %></td>
@@ -42,14 +42,17 @@
 <script>
 
   $(function(){
+
     var table = $('#services_table').dataTable({
       "autoWidth": true,
+      "heightMatch": "none",
       // ****** for debugging.  change to True before deploy ************
       stateSave: false,
       "columnDefs": [{ "visible": false, "targets": [4,5,6,7,8,9,10] }],
       "order": [10, 'desc'],
       paging: false
     });
+
     // table.columnFilter({
     //   aoColumns: [
     //     {type: 'text'},

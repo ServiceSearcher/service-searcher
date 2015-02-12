@@ -5,7 +5,11 @@ class ServicesController < ApplicationController
 
   def index
     @services = Service.all
-    respond_with(@services)
+    # respond_with(@services)
+    respond_to do |format|
+      format.html
+      format.json { render json: @services }
+    end
   end
 
   def show
