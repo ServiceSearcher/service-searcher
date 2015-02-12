@@ -1,5 +1,8 @@
-@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
+// @import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "jquery.dataTables";
+@import "dataTables.bootstrap";
+@import "dataTables.fixedHeader.min";
+@import "dataTables.responsive";
 @import "styles";
-

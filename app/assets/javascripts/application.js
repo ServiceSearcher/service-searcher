@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-// require jquery.dataTables.columnFilter.js
+//= require jquery.dataTables.min.js
+//= require dataTables.responsive.js
+//= require dataTables.fixedHeader.min.js
 //= require bootstrap-sprockets
+//= require dataTables.bootstrap.min.js
 //= require_tree .
