@@ -16,10 +16,12 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    @categories = Service.uniq.pluck(:category)
     respond_with(@service)
   end
 
   def edit
+    @categories = Service.uniq.pluck(:category)
   end
 
   def create
