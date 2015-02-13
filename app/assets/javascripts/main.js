@@ -1,8 +1,9 @@
 $(function(){
   $('.delete').on('click', deleteConfirm);
   $('td').on('click', 'span.text-expand', expandText);
+  $('#newCategory').hide();
+  $('#service_category').on('change', toggleInput);
 });
-
 
 function deleteConfirm(e) {
   e.preventDefault;
@@ -35,4 +36,17 @@ function renderChildRows( api, rowIdx ) {
   return data ?
   $('<table/>').append( data ) :
   false;
+}
+
+// New category toggle
+function toggleInput(){
+  var newField = $('<input type="text" id="newCategory" class="form-control" name="service[category]" placeholder="enter new category...">')
+  if ($(this).val() === 'New Category...') {
+    $(this).removeProp('name');
+    $('#service_category').after(newField);
+    // $('label[for="resource_category"]').after($newField)
+  } else {
+    $(this).attr('name', 'service[category]');
+    $('#newCategory').remove()
+  }
 }
