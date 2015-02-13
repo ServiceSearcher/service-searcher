@@ -6,4 +6,7 @@ RSpec.describe Comment, :type => :model do
     expect(subject).to belong_to(:service)
   end
 
+  it 'should belong to a user' do
+    expect(subject).to belong_to(:user)
+  end
 end

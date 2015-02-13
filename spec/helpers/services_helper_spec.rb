@@ -46,6 +46,4 @@ RSpec.describe ServicesHelper, :type => :helper do
     #   expect(helper.html_break(text)).
     # end
   end
-
-  describ
 end

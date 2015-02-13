@@ -9,6 +9,10 @@ RSpec.describe User, :type => :model do
     }
   }
 
+  it 'should have many comments' do
+    expect(subject).to have_many(:comments)
+  end
+
   describe "email" do
     it "should create a new instance given valid attributes" do
       User.create!(valid_attributes)
