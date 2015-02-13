@@ -1,19 +1,17 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
+  respond_to :html, :xml, :json
 
   def index
     @services = Service.all
-    # respond_with(@services)
-    respond_to do |format|
-      format.html
-      format.json { render json: @services }
-    end
+    respond_with(@services)
   end
 
   def show
-    respond_with(@service)
+    @comments = @service.comments
+    @comment = Comment.new
+    respond_with(@service, @comments, @comment)
   end
 
   def new
