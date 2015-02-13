@@ -2,14 +2,29 @@ $border-color: #dddddd;
 $screen-md-min: 992px;
 $screen-sm-min: 768px;
 
+body {
+  padding-bottom: 4em;
+}
+
+// index
+#services_table_filter {
+  input {
+    height: 34px;
+  }
+}
+
 #services_table {
   tr {
     vertical-align: middle;
-    // white-space: pre;
   }
   th {
     font-size: 1.2em;
   }
+}
+
+// show
+.show-title {
+  padding-left: 2em;
 }
 
 .service-label {
@@ -24,15 +39,32 @@ $screen-sm-min: 768px;
 #show-service {
   width: 100%
 }
+
 .gmap {
   min-height: 450px;
 }
 
+.comments {
+  padding-left: 2em;
+}
+
+// form
+.form-title {
+  padding-bottom: 0.5em;
+}
+#newCategory {
+  margin-top: 1em;
+}
+
+.form-control {
+  height: 54px;
+}
+
+// media queries
 @media screen and (max-width: $screen-sm-min) {
   .service-label, .service-value {
     width: 100%;
     display: block;
-    // word-wrap: break-word;
   }
 }
 

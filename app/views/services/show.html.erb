@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="alert-dismissible"><%= notice %></p>
 
+<div class="show-title">
 <h1><%= @service.name %></h1>
-<%= link_to 'Edit', edit_service_path(@service), class: 'update show-btn btn btn-primary' %>
-<%= link_to 'Delete', service_path(@service), method: :delete, class: 'delete show-btn btn btn-primary' %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_service_path(@service), class: 'update show-btn btn btn-primary' %>
+  <%= link_to 'Delete', service_path(@service), method: :delete, class: 'delete show-btn btn btn-primary' %>
+<% end %>
+</div>
 
 <div class="container-fluid">
   <div class="col-md-6 col-xs-12">
@@ -42,8 +46,8 @@
 
     <% @comments.each do |comment| %>
       <div class="comment-rating"><%= comment.rating %></div>
-      <div class="comment-text"><%= comment.text %></div>
-      <div class="comment-author">Author: <%= comment.display_name %></div>
+      <div class="comment-text"><%= html_break(comment.text) %></div>
+      <div class="comment-author"><%= comment.display_name %> at <span class="comment-creation"><%= comment.updated_at %></span></div>
     <% end %>
 
   <% else %>

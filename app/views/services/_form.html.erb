@@ -11,51 +11,54 @@
     </div>
   <% end %>
   
-  <div class="col-sm-6">
-    <div class="form-group">
-      <%= f.label :name %><br>
-      <%= f.text_field :name, {class: 'form-control'} %>
+  <div class="form-container col-md-offset-1">
+    <div class="col-md-5 col-sm-6">
+      <div class="form-group">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :category %><br>
+        <%= f.select :category, (@categories + ['New Category...']), {}, {class: 'form-control'}  %>
+      </div>
+      <div class="form-group">
+        <%= f.label :website %><br>
+        <%= f.text_field :website, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :address %><br>
+        <%= f.text_area :address, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :phone %><br>
+        <%= f.text_area :phone, {class: 'form-control'} %>
+      </div>
     </div>
-    <div class="form-group">
-      <%= f.label :category %><br>
-      <%= f.text_field :category, {class: 'form-control'} %>
+    <div class="col-md-5 col-sm-6">
+      <div class="form-group">
+        <%= f.label :contact %><br>
+        <%= f.text_area :contact, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :referral %><br>
+        <%= f.text_area :referral, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :eligibility %><br>
+        <%= f.text_area :eligibility, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :insurance %><br>
+        <%= f.text_area :insurance, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :notes %><br>
+        <%= f.text_area :notes, {class: 'form-control'} %>
+      </div>
     </div>
-    <div class="form-group">
-      <%= f.label :website %><br>
-      <%= f.text_field :website, {class: 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <%= f.label :address %><br>
-      <%= f.text_field :address, {class: 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <%= f.label :phone %><br>
-      <%= f.text_field :phone, {class: 'form-control'} %>
-    </div>
-    <div class="actions">
+    <div class="actions col-sm-6">
       <%= f.submit class: "btn" %>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="form-group">
-      <%= f.label :contact %><br>
-      <%= f.text_field :contact, {class: 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <%= f.label :referral %><br>
-      <%= f.text_field :referral, {class: 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <%= f.label :eligibility %><br>
-      <%= f.text_field :eligibility, {class: 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <%= f.label :insurance %><br>
-      <%= f.text_field :insurance, {class: 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <%= f.label :notes %><br>
-      <%= f.text_area :notes, {class: 'form-control'} %>
+      <%= link_to 'Cancel', :back, class: "btn btn-danger" %>
     </div>
   </div>
   
