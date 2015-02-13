@@ -40,5 +40,12 @@ RSpec.describe ServicesHelper, :type => :helper do
       text = "first line \n second line"
       expect(helper.html_break(text)).to eq('first line <br> second line')
     end
+
+    # it 'should not return raw html containing script tags' do
+    #   text = "innocuous html? <script> alert('muahaha, evil malicious script') </script>"
+    #   expect(helper.html_break(text)).
+    # end
   end
+
+  describ
 end

@@ -1,18 +1,37 @@
 $border-color: #dddddd;
+$screen-md-min: 992px;
+$screen-sm-min: 768px;
 
-tr {
-  vertical-align: middle;
-  // white-space: pre;
+#services_table {
+  tr {
+    vertical-align: middle;
+    // white-space: pre;
+  }
+  th {
+    font-size: 1.2em;
+  }
 }
 
-tr {
-   line-height: 25px;
-   min-height: 25px;
-   height: 25px;
+.service-label {
+  font-weight: bold;
 }
 
-th {
-  font-size: 1.2em;
+.service-label, .service-value {
+  // width: 50%;
+}
+
+#show-service {
+  width: 100%
+}
+.gmap {
+  min-height: 450px;
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .service-label, .service-value {
+    width: 100%;
+    display: block;
+  }
 }
 
 // #services_table table tbody {
