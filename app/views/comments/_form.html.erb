@@ -24,6 +24,7 @@
     <%= f.text_field :display_name, { value: current_user.email } %>
   </div>
     <%= hidden_field(:comment, :service_id, { value: @service.id }) %>
+    <%= hidden_field(:comment, :user_id, { value: current_user.id }) %>
   <div class="actions">
     <%= f.submit %>
   </div>
