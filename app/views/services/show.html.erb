@@ -5,74 +5,13 @@
 <%= link_to 'Delete', service_path(@service), method: :delete, class: 'delete show-btn btn btn-primary' %>
 
 <div class="container-fluid">
-  <div class="table-responsive col-sm-6 col-xs-12">
-    <table id="show-service" class="table table">
-      <% if @service.category != "" %>
-        <tr>
-          <td class="service-label">Category:</td>
-          <td class="service-value"><%= @service.category %></td>
-        </tr>
-      <% end %>
-      <% if @service.website != "" %>
-        <tr>
-          <td class="service-label">Website:</td>
-          <td class="service-value"><%= link_to @service.website %></td>
-        </tr>
-      <% end %>
-      <% if @service.notes != "" %>
-        <tr>
-          <td class="service-label">Notes:</td>
-          <td class="service-value"><%= html_break(@service.notes) %></td>
-        </tr>
-      <% end %>
-      <% if @service.phone != "" %>
-        <tr>
-          <td class="service-label">Phone:</td>
-          <td class="service-value"><%= html_break(@service.phone) %></td>
-        </tr>
-      <% end %>
-      <% if @service.address != "" %>
-        <tr>
-          <td class="service-label">Address:</td>
-          <td class="service-value"><%= html_break(@service.address) %></td>
-        </tr>
-      <% end %>
-      <% if @service.contact != "" %>
-        <tr>
-          <td class="service-label">Contact:</td>
-          <td class="service-value"><%= html_break(@service.contact) %></td>
-        </tr>
-      <% end %>
-      <% if @service.referral != "" %>
-        <tr>
-          <td class="service-label">Referral:</td>
-          <td class="service-value"><%= html_break(@service.referral) %></td>
-        </tr>
-      <% end %>
-      <% if @service.eligibility != "" %>
-        <tr>
-          <td class="service-label">Eligibility:</td>
-          <td class="service-value"><%= html_break(@service.eligibility) %></td>
-        </tr>
-      <% end %>
-      <% if @service.insurance != "" %>
-        <tr>
-          <td class="service-label">Insurance:</td>
-          <td class="service-value"><%= html_break(@service.insurance) %></td>
-        </tr>
-      <% end %>
-      <% if @service.updated_at != "" %>
-        <tr>
-          <td class="service-label">Updated:</td>
-          <td class="service-value"><%= @service.updated_at.to_formatted_s(:long) %></td>
-        </tr>
-      <% end %>
-    </table>
+  <div class="col-md-6 col-xs-12">
+    <%= render 'partials/show_service_table' %>
   </div>
 
 
   <iframe
-    class="gmap col-sm-6 col-xs-12"
+    class="gmap col-md-6 col-xs-12"
     frameborder="0" style="border:0"
     src=<%= "https://www.google.com/maps/embed/v1/place?key=#{api_key}&q=#{search_query(@service)}" %>
   >

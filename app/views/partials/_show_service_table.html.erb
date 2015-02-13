@@ -1,0 +1,62 @@
+<table id="show-service" class="table">
+  <% if @service.category != "" %>
+    <tr>
+      <td class="service-label">Category:</td>
+      <td class="service-value"><%= @service.category %></td>
+    </tr>
+  <% end %>
+  <% if @service.website != "" %>
+    <tr>
+      <td class="service-label">Website:</td>
+      <td class="service-value"><%= link_to @service.website %></td>
+    </tr>
+  <% end %>
+  <% if @service.notes != "" %>
+    <tr>
+      <td class="service-label">Notes:</td>
+      <td class="service-value"><p><%= html_break(@service.notes) %></p></td>
+    </tr>
+  <% end %>
+  <% if @service.phone != "" %>
+    <tr>
+      <td class="service-label">Phone:</td>
+      <td class="service-value"><%= html_break(@service.phone) %></td>
+    </tr>
+  <% end %>
+  <% if @service.address != "" %>
+    <tr>
+      <td class="service-label">Address:</td>
+      <td class="service-value"><%= html_break(@service.address) %></td>
+    </tr>
+  <% end %>
+  <% if @service.contact != "" %>
+    <tr>
+      <td class="service-label">Contact:</td>
+      <td class="service-value"><%= html_break(@service.contact) %></td>
+    </tr>
+  <% end %>
+  <% if @service.referral != "" %>
+    <tr>
+      <td class="service-label">Referral:</td>
+      <td class="service-value"><%= html_break(@service.referral) %></td>
+    </tr>
+  <% end %>
+  <% if @service.eligibility != "" %>
+    <tr>
+      <td class="service-label">Eligibility:</td>
+      <td class="service-value"><%= html_break(@service.eligibility) %></td>
+    </tr>
+  <% end %>
+  <% if @service.insurance != "" %>
+    <tr>
+      <td class="service-label">Insurance:</td>
+      <td class="service-value"><%= html_break(@service.insurance) %></td>
+    </tr>
+  <% end %>
+  <% if @service.updated_at != "" %>
+    <tr>
+      <td class="service-label">Updated:</td>
+      <td class="service-value"><%= @service.updated_at.to_formatted_s(:long) %></td>
+    </tr>
+  <% end %>
+</table>
