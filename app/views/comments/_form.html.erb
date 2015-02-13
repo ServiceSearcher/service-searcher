@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :rating %><br>
-    <%= f.number_field :rating, { placeholder: '1-5 stars'} %>
+    <%= f.number_field :rating, { placeholder: '1-5 stars', class: 'form-control'} %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :text %><br>
-    <%= f.text_area :text, { placeholder: "Thoughts on #{@service.name}..."} %>
+    <%= f.text_area :text, { placeholder: "Thoughts on #{@service.name}...", class: 'form-control'} %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :display_name %><br>
-    <%= f.text_field :display_name, { value: current_user.email } %>
+    <%= f.text_field :display_name, { value: current_user.email, class: 'form-control' } %>
   </div>
     <%= hidden_field(:comment, :service_id, { value: @service.id }) %>
     <%= hidden_field(:comment, :user_id, { value: current_user.id }) %>
