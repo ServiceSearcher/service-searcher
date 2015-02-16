@@ -4,7 +4,11 @@
 <h1><%= @service.name %></h1>
 <% if user_signed_in? %>
   <%= link_to 'Edit', edit_service_path(@service), class: 'update show-btn btn btn-primary' %>
-  <%= link_to 'Delete', service_path(@service), method: :delete, class: 'delete show-btn btn btn-primary' %>
+  <%= link_to 'Delete', service_path(@service),
+      method: :delete,
+      class: 'delete show-btn btn btn-primary',
+      data: { confirm: 'Are you sure you want to permanently delete this entry?' } 
+  %>
 <% end %>
 </div>
 

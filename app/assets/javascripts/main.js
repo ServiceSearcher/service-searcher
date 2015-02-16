@@ -1,15 +1,9 @@
 $(function(){
-  $('.delete').on('click', deleteConfirm);
   $('td').on('click', 'span.text-expand', expandText);
   $('#newCategory').hide();
   $('#service_category').on('change', toggleInput);
   $('.alert').on('change', hideAlert);
 });
-
-function deleteConfirm(e) {
-  e.preventDefault;
-  confirm('Are you sure you want to delete this service?')
-}
 
 function expandText() {
   var text = $(this).text()
