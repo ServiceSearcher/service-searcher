@@ -1,0 +1,26 @@
+<h2>Comments</h2>
+
+<% if user_signed_in? %>
+
+  <%= link_to 'New Comment/Rating', '#new-comment-modal', 'data-toggle' => 'modal' %>
+
+  <%= render 'comments/new' %>
+
+  <% @comments.each do |comment| %>
+    <h4 class="comment-author"><%= comment.display_name %></h4>
+    <div class="comment-rating"><%= comment.rating %></div>
+    <div class="comment-text"><%= html_break(comment.text) %></div>
+    <div class="comment-creation"><%= comment.updated_at %></div>
+    <% if current_user.comments.include?(comment) %>
+      <div class="comment-control">
+        <%= link_to 'Edit', '#edit-comment-modal', 'data-toggle' => 'modal' %>
+        <%= render 'comments/edit' %>
+      </div>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <h5>
+    <%= link_to "Log in", new_user_session_path %> to view comments
+  </h5>
+<% end %>

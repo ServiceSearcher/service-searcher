@@ -1,72 +1,10 @@
-$border-color: #dddddd;
-$screen-md-min: 992px;
-$screen-sm-min: 768px;
 
-body {
-  padding-bottom: 4em;
-}
-
-// index
-#services_table_filter {
-  input {
-    height: 34px;
-  }
-}
-
-#services_table {
-  tr {
-    vertical-align: middle;
-  }
-  th {
-    font-size: 1.2em;
-  }
-}
-
-// show
-.show-title {
-  padding-left: 2em;
-}
-
-.service-label {
-  font-weight: bold;
-}
-
-.show-btn {
-  width: 6em;
-  margin-bottom: 1em;
-}
-
-#show-service {
-  width: 100%
-}
-
-.gmap {
-  min-height: 450px;
-}
-
-.comments {
-  padding-left: 2em;
-}
-
-// form
-.form-title {
-  padding-bottom: 0.5em;
-}
-#newCategory {
-  margin-top: 1em;
-}
-
-.form-control {
-  height: 54px;
-}
-
-// star rating
 .star-rating{
   font-size:0;
   white-space:nowrap;
   display:inline-block;
-  width:150px;
-  height:30px;
+  width:500px;
+  height:100px;
   overflow:hidden;
   position:relative;
   background:
@@ -114,15 +52,26 @@ body {
   }
 }
 
-// media queries
-@media screen and (max-width: $screen-sm-min) {
-  .service-label, .service-value {
-    width: 100%;
-    display: block;
+//JUST COSMETIC STUFF FROM HERE ON. THESE AREN'T THE DROIDS YOU ARE LOOKING FOR: MOVE ALONG. 
+
+//reset, center n shiz (don't mind this stuff)
+*, ::after, ::before{
+  height: 100%;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  text-align: center;  
+  vertical-align: middle;
+}
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+  &::before{
+    height: 100%;
+    content:'';
+    width:0;
+    background:red;
+    vertical-align: middle;
+    display:inline-block;
   }
 }
-
-// #services_table table tbody {
-//   border-left: 2px solid $border-color;
-//   border-right: 2px solid $border-color;
-// }

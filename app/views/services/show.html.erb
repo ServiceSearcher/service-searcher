@@ -24,35 +24,5 @@
 
 
 <div class="comments">
-  <h2>Comments</h2>
-
-  <% if user_signed_in? %>
-
-    <%= link_to 'New Comment/Rating', '#new_comment_modal', 'data-toggle' => 'modal' %>
-
-    <div class="modal fade" id="new_comment_modal" tabindex="-1" role="dialog" aria-labelledby="newCommentLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="newCommentLabel">New Comment</h4>
-          </div>
-          <div class="modal-body">
-            <%= render 'comments/form', modal: true %>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <% @comments.each do |comment| %>
-      <div class="comment-rating"><%= comment.rating %></div>
-      <div class="comment-text"><%= html_break(comment.text) %></div>
-      <div class="comment-author"><%= comment.display_name %> at <span class="comment-creation"><%= comment.updated_at %></span></div>
-    <% end %>
-
-  <% else %>
-    <h5>
-      <%= link_to "Log in", new_user_session_path %> to view comments
-    </h5>
-  <% end %>
+  <%= render 'partials/show_comments' %>
 </div>

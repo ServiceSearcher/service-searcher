@@ -11,17 +11,25 @@
     </div>
   <% end %>
 
+
+
   <div class="form-group">
     <%= f.label :rating %><br>
-    <%= f.number_field :rating, { placeholder: '1-5 stars', class: 'form-control'} %>
+    <span class="star-rating">
+      <input type="radio" name="comment[rating]" value="1" <%= 'checked' if @comment.rating == 1 %>><i></i>
+      <input type="radio" name="comment[rating]" value="2" <%= 'checked' if @comment.rating == 2 %>><i></i>
+      <input type="radio" name="comment[rating]" value="3" <%= 'checked' if @comment.rating == 3 %>><i></i>
+      <input type="radio" name="comment[rating]" value="4" <%= 'checked' if @comment.rating == 4 %>><i></i>
+      <input type="radio" name="comment[rating]" value="5" <%= 'checked' if @comment.rating == 5 %>><i></i>
+    </span>
   </div>
   <div class="form-group">
     <%= f.label :text %><br>
-    <%= f.text_area :text, { placeholder: "Thoughts on #{@service.name}...", class: 'form-control'} %>
+    <%= f.text_area :text, { placeholder: @service.name, value: @comment.text, class: 'form-control'} %>
   </div>
   <div class="form-group">
     <%= f.label :display_name %><br>
-    <%= f.text_field :display_name, { value: current_user.email, class: 'form-control' } %>
+    <%= f.text_field :display_name, { value: @comment.display_name || current_user.email, class: 'form-control' } %>
   </div>
     <%= hidden_field(:comment, :service_id, { value: @service.id }) %>
     <%= hidden_field(:comment, :user_id, { value: current_user.id }) %>

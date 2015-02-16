@@ -1,15 +1,5 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ServicesHelper. For example:
-#
-# describe ServicesHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe ServicesHelper, :type => :helper do
 
   describe '#truncate_text' do
@@ -40,10 +30,5 @@ RSpec.describe ServicesHelper, :type => :helper do
       text = "first line \n second line"
       expect(helper.html_break(text)).to eq('first line <br> second line')
     end
-
-    # it 'should not return raw html containing script tags' do
-    #   text = "innocuous html? <script> alert('muahaha, evil malicious script') </script>"
-    #   expect(helper.html_break(text)).
-    # end
   end
 end

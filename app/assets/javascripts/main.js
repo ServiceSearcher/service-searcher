@@ -3,6 +3,7 @@ $(function(){
   $('td').on('click', 'span.text-expand', expandText);
   $('#newCategory').hide();
   $('#service_category').on('change', toggleInput);
+  $('.alert').on('change', hideAlert);
 });
 
 function deleteConfirm(e) {
@@ -39,7 +40,7 @@ function renderChildRows( api, rowIdx ) {
 }
 
 // New category toggle
-function toggleInput(){
+function toggleInput() {
   var newField = $('<input type="text" id="newCategory" class="form-control" name="service[category]" placeholder="enter new category...">')
   if ($(this).val() === 'New Category...') {
     $(this).removeProp('name');
@@ -49,4 +50,9 @@ function toggleInput(){
     $(this).attr('name', 'service[category]');
     $('#newCategory').remove()
   }
+}
+
+function hideAlert() {
+  debugger
+  setTimeout(function() { debugger; $(this).fadeOut().remove() }, 300);
 }
