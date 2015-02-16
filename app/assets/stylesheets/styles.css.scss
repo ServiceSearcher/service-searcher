@@ -61,9 +61,18 @@ body {
 }
 
 // comments
+#new-comment-btn {
+  margin-bottom: 1em;
+}
+
 .comment-updated {
   font-size: 0.8em;
   color: #aaaaaa;
+}
+
+.comment-control {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee;
 }
 
 // star rating

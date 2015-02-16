@@ -1,11 +1,12 @@
 <h2>Comments</h2>
 
 <% if user_signed_in? %>
-
-  <%= link_to 'New Comment/Rating', '#new-comment-modal', 'data-toggle' => 'modal' %>
-
-  <%= render 'comments/new' %>
-
+  
+  <%= link_to 'New Comment/Rating', '#new-comment-modal',
+    'data-toggle' => 'modal',
+     class: 'btn btn-primary',
+     id: 'new-comment-btn' 
+  %>
   <% @comments.each do |comment| %>
     <p class="comment-author"><strong><%= comment.display_name %></strong></p>
     <div class="comment-rating">
@@ -18,13 +19,14 @@
       </span>
     </div>
     <div class="comment-text"><p><%= html_break(comment.text) %></p></div>
-    <div class="comment-updated"><%= distance_of_time_in_words(comment.updated_at, DateTime.now) %> ago</div>
-    <% if current_user.comments.include?(comment) %>
-      <div class="comment-control">
-        <%= link_to 'Edit', '#edit-comment-modal', 'data-toggle' => 'modal' %>
-        <%= render 'comments/edit' %>
-      </div>
-    <% end %>
+    <div class="comment-updated">
+      <p><%= distance_of_time_in_words(comment.updated_at, DateTime.now) %> ago</p>
+    </div>
+    <div class="comment-control">
+      <% if current_user.comments.include?(comment) %>
+        <%= link_to 'Edit', '#edit-comment-modal', 'data-toggle' => 'modal', class: 'btn btn-default btn-sm' %>
+      <% end %>
+    </div>
   <% end %>
 
 <% else %>
@@ -32,3 +34,7 @@
     <%= link_to "Log in", new_user_session_path %> to view comments
   </h5>
 <% end %>
+  
+
+<%= render 'comments/edit' %>
+<%= render 'comments/new' %>
