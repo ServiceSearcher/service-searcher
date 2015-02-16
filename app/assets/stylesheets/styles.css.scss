@@ -60,8 +60,14 @@ body {
   height: 54px;
 }
 
+// comments
+.comment-updated {
+  font-size: 0.8em;
+  color: #aaaaaa;
+}
+
 // star rating
-.star-rating{
+.star-rating {
   font-size:0;
   white-space:nowrap;
   display:inline-block;
@@ -111,6 +117,18 @@ body {
   }
   i ~ i ~ i ~ i ~ i{
     width: 100%;
+  }
+}
+
+.star-show {
+  width: 100px;
+  height: 20px;
+// undo hover events
+  input:hover + i {
+    opacity: 0;
+  }
+  input:checked + i {
+    opacity: 1;
   }
 }
 

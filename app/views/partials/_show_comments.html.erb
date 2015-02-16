@@ -7,10 +7,18 @@
   <%= render 'comments/new' %>
 
   <% @comments.each do |comment| %>
-    <h4 class="comment-author"><%= comment.display_name %></h4>
-    <div class="comment-rating"><%= comment.rating %></div>
-    <div class="comment-text"><%= html_break(comment.text) %></div>
-    <div class="comment-creation"><%= comment.updated_at %></div>
+    <p class="comment-author"><strong><%= comment.display_name %></strong></p>
+    <div class="comment-rating">
+      <span class="star-rating star-show">
+        <input type="radio" value="1" <%= 'checked' if comment.rating == 1 %>><i></i>
+        <input type="radio" value="2" <%= 'checked' if comment.rating == 2 %>><i></i>
+        <input type="radio" value="3" <%= 'checked' if comment.rating == 3 %>><i></i>
+        <input type="radio" value="4" <%= 'checked' if comment.rating == 4 %>><i></i>
+        <input type="radio" value="5" <%= 'checked' if comment.rating == 5 %>><i></i>
+      </span>
+    </div>
+    <div class="comment-text"><p><%= html_break(comment.text) %></p></div>
+    <div class="comment-updated"><%= distance_of_time_in_words(comment.updated_at, DateTime.now) %> ago</div>
     <% if current_user.comments.include?(comment) %>
       <div class="comment-control">
         <%= link_to 'Edit', '#edit-comment-modal', 'data-toggle' => 'modal' %>
