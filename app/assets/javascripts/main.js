@@ -3,7 +3,7 @@ $(function(){
   $('#newCategory').hide();
   $('#service_category').on('change', toggleInput);
   $('.alert').on('change', hideAlert);
-});
+}); 
 
 function expandText() {
   var text = $(this).text()
