@@ -9,7 +9,7 @@ class ServicesController < ApplicationController
   end
 
   def show
-    @comments = @service.comments
+    @comments = @service.comments.order(updated_at: :desc)
     @comment = Comment.new
     respond_with(@service, @comments, @comment)
   end

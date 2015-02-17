@@ -11,12 +11,14 @@ class CommentsController < ApplicationController
 
   def update
     @comment.update(comment_params)
-    respond_with(@comment)
+    # respond_with(@comment)
+    redirect_to(:back)
   end
 
   def destroy
     @comment.destroy
-    respond_with(@comment)
+    # respond_with(@comment)
+    redirect_to(:back)
   end
 
   private
