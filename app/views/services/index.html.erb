@@ -3,7 +3,7 @@
     <tr>
       <th class="control"></th>
       <th class="all">Name</th>
-      <th class="min-phone-l text-center">Website</th>
+      <th class="min-phone-l text-center">Link</th>
       <th class="min-tablet col-md-2 col-sm-3">Category</th>
       <th class="desktop col-md-6">Notes</th>
       <th class="none" >Phone</th>
@@ -23,7 +23,7 @@
         <td class="all"><%= link_to(service.name, service_path(service)) %></td>
         <td class="min-phone-l text-center">
           <%= !service.website || service.website == '' ? '' : 
-            link_to('link', service.website, class: 'btn btn-default', target: :_blank) %>
+            link_to('link', service.website, class: 'btn btn-primary btn-sm', target: :_blank) %>
         </td>
         <td class="min-tablet col-md-2 col-sm-3"><%= service.category %></td>
         <td class="desktop col-md-6"><%= truncate_text(service.notes) %></td>
