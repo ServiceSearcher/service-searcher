@@ -10,8 +10,14 @@
     </div>
   <% end %>
 
+  <%= image_tag 'bxd-logo.png', class: 'pull-left nav-logo' %>
+
   <p class="navbar-text pull-left">
-    <%= link_to 'Home', services_path, class: 'nav-home' %>
+    <%= link_to 'Home', services_path, class: 'navbar-link' %>
+
+    <% if user_signed_in? %>
+      | <%= link_to 'New Resource', new_service_path, class: 'navbar-link' %>
+    <% end %>
   </p>
   <p class="navbar-text pull-right nav-login">
   <% if user_signed_in? %>

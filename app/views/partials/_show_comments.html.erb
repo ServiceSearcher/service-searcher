@@ -24,7 +24,7 @@
     </div>
     <div class="comment-control">
       <% if current_user.comments.include?(comment) %>
-        <%= link_to 'Edit', '#edit-comment-modal', 'data-id' => comment.id, 'data-toggle' => 'modal', class: 'btn btn-default btn-sm' %>
+        <%= link_to 'Edit', '#edit-comment-modal', 'data-id' => comment.id, 'data-toggle' => 'modal', class: 'btn btn-primary btn-sm' %>
         <%= link_to 'Delete', comment_path(comment),
             method: :delete,
             class: 'delete btn btn-danger btn-sm',
@@ -34,6 +34,7 @@
         
       <% end %>
     </div>
+    <%= render 'comments/new' %>
   <% end %>
 
 <% else %>
@@ -42,5 +43,3 @@
   </h5>
 <% end %>
   
-
-<%= render 'comments/new' %>
