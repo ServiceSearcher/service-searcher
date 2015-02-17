@@ -15,6 +15,7 @@
 //= require jquery.dataTables.min.js
 //= require dataTables.responsive.js
 //= require dataTables.fixedHeader.min.js
-//= require bootstrap-sprockets
+// require bootstrap-sprockets
+//= require bootstrap-modal.js
 //= require dataTables.bootstrap.min.js
 //= require_tree .
