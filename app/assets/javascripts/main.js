@@ -2,7 +2,10 @@ $(function(){
   $('td').on('click', 'span.text-expand', expandText);
   $('#newCategory').hide();
   $('#service_category').on('change', toggleInput);
-  $('.alert').on('change', hideAlert);
+  // $('.alert').on('change', hideAlert);
+  $(".alert").delay(4000).slideUp(200, function hideAlert() {
+    $(this).alert('close');
+  });
 }); 
 
 function expandText() {
@@ -46,7 +49,7 @@ function toggleInput() {
   }
 }
 
-function hideAlert() {
-  debugger
-  setTimeout(function() { debugger; $(this).fadeOut().remove() }, 300);
-}
+// function hideAlert() {
+//   debugger
+//   setTimeout(function() { debugger; $(this).fadeOut().remove() }, 300);
+// }

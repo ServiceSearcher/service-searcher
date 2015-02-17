@@ -20,6 +20,21 @@ nav {
   padding: 0 1em;
 }
 
+.navbar-link {
+  font-weight: bold;
+}
+// user
+.delete-account{
+  input {
+    margin: 0.5em 0;  
+  }
+}
+
+.google-btn {
+  width: 20em;
+  margin-left: -0.2em;
+}
+
 // index
 #services_table_filter {
   input {

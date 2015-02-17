@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Sign Up With Your Bronx Defenders Email</h2>
+  
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <a href=<%= omniauth_authorize_path(resource_name, provider) %>>
+        <%= image_tag "sign-in-with-google.png", class: 'google-btn' %>
+      </a>
+  
+    <% end -%>
+  <% end -%>
+</div>
