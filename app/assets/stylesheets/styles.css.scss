@@ -48,9 +48,14 @@ body {
 }
 
 // index
+
 #services_table_filter {
   input {
     height: 34px;
+    width: 17em;
+  }
+  label {
+    font-weight: bold;
   }
 }
 
@@ -60,6 +65,7 @@ body {
   }
   th {
     font-size: 1.2em;
+    text-align: center;
   }
   .all a {
     font-weight: bold;
