@@ -8,7 +8,7 @@
   <% if @service.website != "" %>
     <tr>
       <td class="service-label">Website:</td>
-      <td class="service-value"><%= link_to @service.website %></td>
+      <td class="service-value"><%= link_to @service.website, @service.website, target: '_blank' %></td>
     </tr>
   <% end %>
   <% if @service.notes != "" %>
