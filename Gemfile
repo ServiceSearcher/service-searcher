@@ -46,7 +46,7 @@ group :development, :test do
     gem 'rspec-rails', '~> 3.0'
     gem 'shoulda-matchers', '~> 2.8.0'
     gem 'pry-rails'
-    gem 'spring'
+    gem 'spring', '~> 1.3.1'
 end
 
 gem 'rails_12factor', group: :production
