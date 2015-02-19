@@ -6,9 +6,8 @@ body {
   padding-bottom: 4em;
 }
 
-.btn-danger {
-  // background-color: black;
-  // color: black;
+.btn-primary {
+  background-color: black;
 }
 
 // nav
@@ -21,11 +20,6 @@ body {
   }
 
   .nav-home {
-    // border: 1px solid #e7e7e7;
-    // border-radius: 0.4em;
-    // background-color: white;
-    // padding: 0.8em;
-    // margin-left: 0.8em;
     font-weight: bold;
     color: #777777;
   }
@@ -54,23 +48,27 @@ body {
     height: 34px;
     width: 17em;
   }
+
   label {
     font-weight: bold;
   }
 }
 
 #services_table {
-  td {
-    vertical-align: middle;
-  }
   th {
     font-size: 1.2em;
     text-align: center;
   }
+
+  td {
+    vertical-align: middle;
+  }
+
   .all a {
     font-weight: bold;
     color: black;
   }
+
   .text-expand {
     cursor: pointer;
     text-decoration: underline;
@@ -78,25 +76,21 @@ body {
 }
 
 // show
-.btn-primary {
-  background-color: black;
-}
-
 .show-title {
   padding-left: 2em;
+
+  .show-btn {
+    width: 6em;
+    margin-bottom: 1em;
+  }
 }
 
-.service-label {
-  font-weight: bold;
-}
-
-.show-btn {
-  width: 6em;
-  margin-bottom: 1em;
-}
-
-#show-service {
+#show-service-table {
   width: 100%
+
+  .service-label {
+    font-weight: bold;
+  }
 }
 
 .gmap {
@@ -105,18 +99,6 @@ body {
 
 .comments {
   padding-left: 2em;
-}
-
-// form
-.form-title {
-  padding-bottom: 0.5em;
-}
-#newCategory {
-  margin-top: 1em;
-}
-
-.form-control {
-  height: 54px;
 }
 
 // comments
@@ -134,19 +116,33 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-// star rating
+// service form
+.form-title {
+  padding-bottom: 0.5em;
+}
+
+.form-control {
+  height: 54px;
+}
+
+#newCategory {
+  margin-top: 1em;
+}
+
+// star rating from http://rog.ie/blog/css-star-rater
 .star-rating {
-  font-size:0;
-  white-space:nowrap;
-  display:inline-block;
-  width:150px;
-  height:30px;
-  overflow:hidden;
-  position:relative;
+  font-size: 0;
+  white-space: nowrap;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
   background:
       url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
   background-size: contain;
-  i{
+
+  i {
     opacity: 0;
     position: absolute;
     left: 0;
@@ -158,32 +154,34 @@ body {
         url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');  
     background-size: contain;
   }
-  input{ 
-    -moz-appearance:none;
-    -webkit-appearance:none;
+
+  input { 
+    -moz-appearance: none;
+    -webkit-appearance: none;
     opacity: 0;
-    display:inline-block;
+    display: inline-block;
     width: 20%;
     height: 100%; 
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     z-index: 2;
     position: relative;
     &:hover + i,
-    &:checked + i{
+    &:checked + i {
       opacity:1;    
     }
   }
-  i ~ i{
+
+  i ~ i {
     width: 40%;
   }
-  i ~ i ~ i{
+  i ~ i ~ i {
     width: 60%;
   }
-  i ~ i ~ i ~ i{
+  i ~ i ~ i ~ i {
     width: 80%;
   }
-  i ~ i ~ i ~ i ~ i{
+  i ~ i ~ i ~ i ~ i {
     width: 100%;
   }
 }
@@ -211,8 +209,3 @@ body {
     display: block;
   }
 }
-
-// #services_table table tbody {
-//   border-left: 2px solid $border-color;
-//   border-right: 2px solid $border-color;
-// }
