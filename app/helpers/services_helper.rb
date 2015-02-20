@@ -11,8 +11,8 @@ module ServicesHelper
   end
 
   def search_query(service)
-    name = service.name.gsub(/[?.,&#!\[\]\{\}]/,'').gsub(/[ \/-]/,'+') if service.name
-    address = service.address.gsub(/[?.,&#!\[\]\{\}]/,'').gsub(/[ \/-]/,'+') if service.address
+    name = service.name ? service.name.gsub(/[?.,&#!\[\]\{\}]/,'').gsub(/[ \/-]/,'+') : ''
+    address = service.address ? service.address.gsub(/[?.,&#!\[\]\{\}]/,'').gsub(/[ \/-]/,'+') : ''
     "#{name}+#{address}"
   end
 
