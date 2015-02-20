@@ -6,7 +6,6 @@
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file.
-// require bootstrap-modal.js
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
@@ -16,6 +15,7 @@
 //= require jquery.dataTables.min.js
 //= require dataTables.responsive.js
 //= require dataTables.fixedHeader.min.js
-//= require bootstrap-sprockets
+// require bootstrap-sprockets
+//= require bootstrap-modal.js
 //= require dataTables.bootstrap.min.js
 //= require_tree .
