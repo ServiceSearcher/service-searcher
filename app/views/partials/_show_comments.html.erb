@@ -24,7 +24,7 @@
     </div>
     <div class="comment-control">
       <% if current_user.comments.include?(comment) %>
-        <%= link_to 'Edit', '#edit-comment-modal', 'data-id' => comment.id, 'data-toggle' => 'modal', class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Edit', "#edit-comment-modal-#{comment.id}", 'data-id' => comment.id, 'data-toggle' => 'modal', class: 'btn btn-primary btn-sm' %>
         <%= link_to 'Delete', comment_path(comment),
             method: :delete,
             class: 'delete btn btn-danger btn-sm',
