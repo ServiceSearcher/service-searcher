@@ -33,7 +33,7 @@
         <td class="none"><%= service.referral %></td>
         <td class="none"><%= service.eligibility %></td>
         <td class="none"><%= service.insurance %></td>
-        <td class="none"><%= service.updated_at %></td>
+        <td class="none"><%= service.updated_at.to_formatted_s(:long) %></td>
       </tr>
     <% end %>
   </tbody>
