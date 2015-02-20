@@ -1,6 +1,7 @@
 $border-color: #dddddd;
 $screen-md-min: 992px;
 $screen-sm-min: 768px;
+$bootstrap-blue: #337ab7;
 
 body {
   padding-bottom: 4em;
@@ -15,8 +16,13 @@ body {
   border-radius: 0;
   padding-right: 1em;
 
+  .username, .navbar-link {
+    font-size: 1.2em;
+  }
+
   .navbar-link {
     font-weight: bold;
+    color: $bootstrap-blue;
   }
 
   .nav-home {
