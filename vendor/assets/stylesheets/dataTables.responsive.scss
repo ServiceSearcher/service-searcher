@@ -16,7 +16,7 @@
 
 @mixin control-open() {
 	content: '+';
-	background-color: black;
+	background-color: #31b131;
 }
 
 @mixin control-close() {

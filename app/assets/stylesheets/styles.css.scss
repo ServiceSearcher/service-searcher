@@ -7,7 +7,7 @@ body {
 }
 
 .btn-primary {
-  background-color: black;
+  // background-color: black;
 }
 
 // nav
@@ -67,6 +67,9 @@ body {
   .all a {
     font-weight: bold;
     color: black;
+    &:hover{ 
+      color: #337ab7;
+    }
   }
 
   .text-expand {
@@ -86,7 +89,7 @@ body {
 }
 
 #show-service-table {
-  width: 100%
+  width: 100%;
 
   .service-label {
     font-weight: bold;

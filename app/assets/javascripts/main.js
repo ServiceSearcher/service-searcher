@@ -22,12 +22,25 @@ function toggleInput() {
   if ($(this).val() === 'New Category...') {
     $(this).removeProp('name');
     $('#service_category').after(newField);
-    // $('label[for="resource_category"]').after($newField)
   } else {
     $(this).attr('name', 'service[category]');
     $('#newCategory').remove()
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function renderChildRows( api, rowIdx ) {
 
