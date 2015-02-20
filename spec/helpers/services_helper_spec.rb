@@ -28,6 +28,7 @@ RSpec.describe ServicesHelper, :type => :helper do
   describe '#html_break' do
     it 'should turn newline characters into html tags' do
       text = "first line \n second line"
+      expect(helper.html_break(nil)).to eq(nil)
       expect(helper.html_break(text)).to eq('first line <br> second line')
     end
   end

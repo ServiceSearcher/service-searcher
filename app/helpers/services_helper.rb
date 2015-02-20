@@ -7,7 +7,7 @@ module ServicesHelper
   end
 
   def html_break(text)
-    text.gsub("\n", '<br>').html_safe
+    text.gsub("\n", '<br>').html_safe if text
   end
 
   def search_query(service)
