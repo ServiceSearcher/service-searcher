@@ -4,8 +4,13 @@ class Service < ActiveRecord::Base
 
   def average_rating
     if self.comments.first
-      sum = self.comments.map(&:rating).inject(:+)
-      sum / self.comments.length.to_f
+      ratings = self.comments.map(&:rating).compact
+      if ratings.first
+        sum = ratings.inject(:+)
+        sum / ratings.length.to_f
+      else
+        0
+      end
     else
       0
     end

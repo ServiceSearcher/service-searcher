@@ -21,13 +21,22 @@ RSpec.describe Service, :type => :model do
   end
 
   describe '#average_rating' do
+    let(:service) { Service.create(name: 'organization') }
+
     it 'should return an average of its comments\' ratings' do
-      service = Service.create(name: 'organization')
       expect(service.average_rating).to eq(0)
 
-      comment1 = Comment.create({service: service, rating: 3, text: comment1})
-      comment2 = Comment.create({service: service, rating: 4, text: comment2})
+      Comment.create({service: service, rating: 3, text: 'comment1'})
+      Comment.create({service: service, rating: 4, text: 'comment2'})
+
       expect(service.average_rating).to eq(3.5)
+    end
+
+    it 'should ignore nil ratings' do
+      Comment.create({service: service, text: 'no_rating'})
+      Comment.create({service: service, rating: 3, text: 'comment1'})
+
+      expect(service.average_rating).to eq(3)
     end
   end
 end
