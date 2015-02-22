@@ -7,7 +7,7 @@ class Service < ActiveRecord::Base
       ratings = self.comments.map(&:rating).compact
       if ratings.first
         sum = ratings.inject(:+)
-        sum / ratings.length.to_f
+        (sum / ratings.length.to_f).round
       else
         0
       end
