@@ -10,13 +10,7 @@
   <% @comments.each do |comment| %>
     <p class="comment-author"><strong><%= comment.display_name %></strong></p>
     <div class="comment-rating">
-      <span class="star-rating star-show">
-        <input type="radio" value="1" <%= 'checked' if comment.rating == 1 %>><i></i>
-        <input type="radio" value="2" <%= 'checked' if comment.rating == 2 %>><i></i>
-        <input type="radio" value="3" <%= 'checked' if comment.rating == 3 %>><i></i>
-        <input type="radio" value="4" <%= 'checked' if comment.rating == 4 %>><i></i>
-        <input type="radio" value="5" <%= 'checked' if comment.rating == 5 %>><i></i>
-      </span>
+      <%= render 'partials/star_show', rating: comment.rating %>
     </div>
     <div class="comment-text"><p><%= html_break(comment.text) %></p></div>
     <div class="comment-updated">

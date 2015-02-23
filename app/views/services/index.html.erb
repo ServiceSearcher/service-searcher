@@ -6,6 +6,7 @@
       <th class="min-phone-l text-center">Link</th>
       <th class="min-tablet col-md-2 col-sm-3">Category</th>
       <th class="desktop col-md-6">Notes</th>
+      <th class="none" >Rating</th>
       <th class="none" >Phone</th>
       <th class="none">Address</th>
       <th class="none">Contact</th>
@@ -27,6 +28,7 @@
         </td>
         <td class="min-tablet col-md-2 col-sm-3"><%= service.category %></td>
         <td class="desktop col-md-6"><%= truncate_text(service.notes) %></td>
+        <td class="none"><%= render 'partials/star_show', rating: service.average_rating %></td>
         <td class="none"><%= service.phone %></td>
         <td class="none"><%= service.address %></td>
         <td class="none"><%= service.contact %></td>

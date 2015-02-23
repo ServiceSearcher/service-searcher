@@ -5,6 +5,10 @@
       <td class="service-value"><%= @service.category %></td>
     </tr>
   <% end %>
+  <tr>
+    <td class="service-label">Rating</td>
+    <td class="service-value"><%= render 'partials/star_show', rating: @service.average_rating %></td>
+  </tr>
   <% if @service.website != "" && @service.website %>
     <tr>
       <td class="service-label">Website:</td>
