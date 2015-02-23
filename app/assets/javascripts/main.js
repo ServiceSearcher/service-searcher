@@ -1,5 +1,5 @@
 $(function(){
-  $('td').on('click', 'span.text-expand', expandText);
+  $('table').on('click', 'span.text-expand', expandText);
   $('#newCategory').hide();
   $('#service_category').on('change', toggleInput);
   $(".alert").delay(4000).slideUp(200, hideAlert);
