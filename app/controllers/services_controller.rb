@@ -12,7 +12,10 @@ class ServicesController < ApplicationController
   def show
     @comments = @service.comments.order(updated_at: :desc)
     @comment = Comment.new
-    respond_with(@service, @comments, @comment)
+    respond_with(@service, @comments, @comment) do |format|
+      format.html { render }
+      format.json { render json: @service.to_json(:include => :comments) }
+    end
   end
 
   def new
