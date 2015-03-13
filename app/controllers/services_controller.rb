@@ -14,7 +14,11 @@ class ServicesController < ApplicationController
     @comment = Comment.new
     respond_with(@service, @comments, @comment) do |format|
       format.html { render }
-      format.json { render json: @service.to_json(:include => :comments) }
+      if user_signed_in?
+        format.json { render json: @service.to_json(:include => :comments) }
+      else
+        format.json { render json: @service.to_json }
+      end
     end
   end
 
