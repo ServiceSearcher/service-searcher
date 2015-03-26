@@ -1,6 +1,6 @@
-== README
+= README
 
-= NYC Social Works
+== NYC Social Works
 A database of social work resources built for the Bronx Defenders.
 
 Anyone can view at http://bxd.herokuapp.com
