@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   get 'comments/create'
-
   get 'comments/update'
-
   get 'comments/destroy'
 
+  resources :admin, only: [:index]
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/auth/google_oauth2/callback" }
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :services
