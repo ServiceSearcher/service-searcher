@@ -77,6 +77,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #specify mailer url for devise
-  config.action_mailer.default_url_options = { host: 'bxd.herokuapp.com', port: 80 }
+  config.action_mailer.default_url_options = { host: 'servicesearcher.org', port: 80 }
 
 end

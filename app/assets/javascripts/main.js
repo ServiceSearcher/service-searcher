@@ -3,14 +3,14 @@ $(function(){
   $('#newCategory').hide();
   $('#service_category').on('change', toggleInput);
   $(".alert").delay(4000).slideUp(200, hideAlert);
-}); 
+});
 
 function hideAlert() {
   $(this).alert('close');
 }
 
 function expandText() {
-  var text = $(this).text()
+  var text = $(this).text();
   $(this).text(text === '...' ? '( - )' : '...')
          .prev()
          .toggleClass('hidden');
@@ -18,13 +18,13 @@ function expandText() {
 
 // New category toggle
 function toggleInput() {
-  var newField = $('<input type="text" id="newCategory" class="form-control" name="service[category]" placeholder="enter new category...">')
+  var newField = $('<input type="text" id="newCategory" class="form-control" name="service[category]" placeholder="enter new category...">');
   if ($(this).val() === 'New Category...') {
     $(this).removeProp('name');
     $('#service_category').after(newField);
   } else {
     $(this).attr('name', 'service[category]');
-    $('#newCategory').remove()
+    $('#newCategory').remove();
   }
 }
 

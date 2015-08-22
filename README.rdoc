@@ -1,8 +1,9 @@
 = README
 
-== NYC Social Works
-A database of social work resources built for the Bronx Defenders.
+== Service Searcher
+A database of social work resources.
 
-Anyone can view at http://bxd.herokuapp.com
-At this time, only members of that organization can edit the database.
-If you are interested in a version of this for your organization, feel free to fork the repository, or contact me at michaelprude <at> gmail <dot> com.
+http://www.servicesearcher.org
+
+Organization-specific version at:
+http://bxd.herokuapp.com
