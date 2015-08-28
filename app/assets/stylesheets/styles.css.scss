@@ -16,6 +16,12 @@ body {
   border-radius: 0;
   padding-right: 1em;
 
+  .nav-login {
+    // while we sort out who can sign up
+    // TODO: remove
+    display: none;
+  }
+
   .username, .navbar-link {
     font-size: 1.2em;
   }
@@ -115,6 +121,9 @@ body {
 }
 
 .comments {
+  // while we sort out who can sign up
+  // TODO: remove
+  display: none;
   padding-left: 2em;
 }
 
