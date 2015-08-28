@@ -17,6 +17,6 @@ module ServicesHelper
   end
 
   def api_key
-    ENV['GOOGLE_API_KEY']
+    ENV['SERVICE_SEARCHER_GOOGLE_API_KEY']
   end
 end
