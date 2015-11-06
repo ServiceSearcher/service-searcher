@@ -30,6 +30,10 @@
         <%= f.text_area :address, {class: 'form-control'} %>
       </div>
       <div class="form-group">
+        <%= f.label :borough %><br>
+        <%= f.select :borough, @boroughs, {class: 'form-control', prompt: 'Select borough...'} %>
+      </div>
+      <div class="form-group">
         <%= f.label :phone %><br>
         <%= f.text_area :phone, {class: 'form-control'} %>
       </div>

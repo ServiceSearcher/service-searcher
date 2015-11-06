@@ -35,6 +35,12 @@
       <td class="service-value"><%= html_break(@service.address) %></td>
     </tr>
   <% end %>
+  <% if @service.borough != "" && @service.borough %>
+    <tr>
+      <td class="service-label">Borough:</td>
+      <td class="service-value"><%= html_break(@service.borough) %></td>
+    </tr>
+  <% end %>
   <% if @service.contact != "" && @service.contact %>
     <tr>
       <td class="service-label">Contact:</td>
