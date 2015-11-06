@@ -11,8 +11,14 @@
       <% end %>
       <th class="none" >Phone</th>
       <th class="none">Address</th>
+<<<<<<< HEAD
       <th class="none">Borough</th>
       <th class="none">Contact</th>
+=======
+      <% if user_signed_in? %>
+        <th class="none">Contact</th>
+      <% end %>
+>>>>>>> 359e50ec357e6374d66fb0dd1f8c15a73c458e10
       <th class="none">Referral</th>
       <th class="none">Eligibility</th>
       <th class="none">Insurance</th>
@@ -37,7 +43,9 @@
         <td class="none"><%= service.phone %></td>
         <td class="none"><%= service.address %></td>
         <td class="none"><%= service.borough %></td>
-        <td class="none"><%= service.contact %></td>
+        <% if user_signed_in? %>
+          <td class="none"><%= service.contact %></td>
+        <% end %>
         <td class="none"><%= service.referral %></td>
         <td class="none"><%= service.eligibility %></td>
         <td class="none"><%= service.insurance %></td>

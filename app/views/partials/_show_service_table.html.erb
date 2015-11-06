@@ -41,7 +41,7 @@
       <td class="service-value"><%= html_break(@service.borough) %></td>
     </tr>
   <% end %>
-  <% if @service.contact != "" && @service.contact %>
+  <% if @service.contact != "" && @service.contact && user_signed_in? %>
     <tr>
       <td class="service-label">Contact:</td>
       <td class="service-value"><%= html_break(@service.contact) %></td>
