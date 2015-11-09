@@ -2,6 +2,10 @@ class Service < ActiveRecord::Base
   validates_presence_of :name
   has_many :comments, dependent: :destroy
 
+  def self.boroughs
+    ['Bronx', 'Brooklyn', 'Manhattan', 'Queens', 'Staten Island']
+  end
+
   def average_rating
     if self.comments.first
       ratings = self.comments.map(&:rating).compact

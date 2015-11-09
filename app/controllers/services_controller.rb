@@ -51,7 +51,6 @@ class ServicesController < ApplicationController
   private
     def set_service
       @service = Service.find(params[:id])
-      @boroughs = ['Bronx', 'Queens', 'Brooklyn', 'Manhattan', 'Statten Island']
     end
 
     def service_params
